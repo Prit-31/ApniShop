@@ -7,9 +7,11 @@ div::-webkit-scrollbar {
     height: 20px;
 
 }
-div::-webkit-scrollbar-button{
-    width:20%;
+
+div::-webkit-scrollbar-button {
+    width: 20%;
 }
+
 div::-webkit-scrollbar-track {
     background-color: white;
     border: 2px solid #ff8f9c;
@@ -380,8 +382,8 @@ a img {
 
 .men-main-con,
 .women,
-.footware, 
-.perfume{
+.footware,
+.perfume {
     position: absolute;
     /* left: -230px; */
     right: 0px;
@@ -425,9 +427,11 @@ a img {
 .men-cetegories a:hover {
     color: #ff8f9c;
 }
-.men-main-con{
+
+.men-main-con {
     left: -290px;
 }
+
 .women {
     left: -55px;
 }
@@ -453,49 +457,67 @@ main {
 
 
 .home-banner {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    min-width: 100%;
+    max-height: 450px;
+    /* aspect-ratio: 1 / 1; */
+    -webkit-border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home-banner img {
-    width: 90%;
+    width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: right;
+    object-position: right;
 }
-.home-banner-info{
+
+.home-banner-info {
     position: absolute;
     left: 20%;
+
 }
-.home-banner-info p{
+
+.home-banner-info p {
     color: #ff8f9c;
     font-size: 40px;
     font-family: Poppins, sans-serif;
     margin: 0px;
     padding: 0px;
 }
-.home-banner-info h1{
+
+.home-banner-info h1 {
     font-family: Poppins, sans-serif;
     color: #212121;
     font-weight: bold;
 }
-.home-banner-info h4{
+
+.home-banner-info h4 {
     font-family: Poppins, sans-serif;
     font-weight: bold;
     color: #787878;
     margin: 0px 0px 20px 0px;
 }
-.home-banner-info button{
+
+.home-banner-info button {
     background: #ff8f9c;
     border: none;
     padding: 10px 30px;
     color: white;
     border-radius: 10px;
 }
-.home-banner-info button:hover{
+
+.home-banner-info button:hover {
     background: #212121;
 }
+
 /* ----------------------------------
    Item-categories
 ------------------------------------ */
@@ -520,7 +542,7 @@ main {
 }
 
 .item-categories-sub {
-    padding:0px 0px 15px 0px;
+    padding: 0px 0px 15px 0px;
     width: auto;
     height: 100%;
     display: flex;
@@ -798,7 +820,7 @@ main {
     height: 87%;
     position: relative;
     overflow-x: scroll;
-    
+
 }
 
 .item-sub-con {
@@ -807,7 +829,7 @@ main {
     width: auto;
     left: 0px;
     position: absolute;
-    padding:0px 0px 15px 0px;
+    padding: 0px 0px 15px 0px;
 }
 
 .item-list-con {
@@ -1751,7 +1773,6 @@ footer {
     }
 
     .services-card .ser {
-        border: 1px solid red;
         width: auto;
         margin: 10px 0px;
     }
@@ -1805,8 +1826,9 @@ footer {
     .showcase-day-img img {
         height: 70%;
     }
-    .item-categories::-webkit-scrollbar-button{
-        width:15%;
+
+    .item-categories::-webkit-scrollbar-button {
+        width: 15%;
     }
 }
 
@@ -1997,15 +2019,30 @@ footer {
     .footer-con-3 {
         padding-bottom: 70px;
     }
+
+    .home-banner {
+        height: 350px;
+    }
+
+    .home-banner img {
+        max-height: 100%;
+
+    }
 }
 
 @media screen and (max-width:900px) {
     .showcase-day-img img {
         height: 80%;
     }
+
 }
 
 @media screen and (max-width:770px) {
+    .home-banner {
+        height: 350px;
+        aspect-ratio: auto;
+    }
+
     .nav {
         justify-content: space-between;
     }
@@ -2124,11 +2161,26 @@ footer {
     .showcase-main-con {
         height: 850px;
     }
+
+    .home-banner-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        background: hsla(0, 0%, 100%, 0.8);
+        padding: 20px;
+        border-radius: 20px;
+    }
 }
 
 @media screen and (max-width:578px) {
     .header-top-actions {
         display: none;
+    }
+
+    .home-banner {
+        aspect-ratio: 4/2;
     }
 
     .nav {
@@ -2174,14 +2226,35 @@ footer {
     .showcase-main-con {
         height: 800px;
     }
-    .item-categories::-webkit-scrollbar-button{
-        width:50px;
+
+    .item-categories::-webkit-scrollbar-button {
+        width: 50px;
     }
+}
+
+@media screen and (max-width:530px) {
+    .home-banner-info {
+        width: 60%;
+    }
+    .home-banner-info p{
+        font-size: 24px;
+    }
+    .home-banner-info h1{
+        font-size: 20px;
+    }
+    .home-banner-info h4{
+        font-size: 18px;
+    }
+
 }
 
 @media screen and (max-width:480px) {
     .header-top {
         padding: 0px 12px;
+    }
+
+    .home-banner {
+        aspect-ratio: 5/3;
     }
 
     .nav {
@@ -2252,6 +2325,10 @@ footer {
 
 @media screen and (max-width:450px) {
     .product-con {}
+
+    .home-banner {
+        aspect-ratio: 1/1;
+    }
 }
 
 @media screen and (max-width:400px) {
@@ -2291,10 +2368,19 @@ footer {
         width: 20px;
         height: 20px;
     }
-    .item-categories::-webkit-scrollbar-button{
-        width:25px;
-    }
 
+    .item-categories::-webkit-scrollbar-button {
+        width: 25px;
+    }
+    .home-banner-info {
+        width: 80%;
+    }
+    .home-banner-info p{
+        font-size: 18px;
+    }
+    .home-banner-info h4{
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width:350px) {
@@ -2329,6 +2415,18 @@ footer {
 }
 
 @media screen and (max-width:300px) {
+    .home-banner-info {
+        width: 90%;
+    }
+    .home-banner-info p{
+        font-size: 18px;
+    }
+    .home-banner-info h1{
+        font-size: 18px;
+    }
+    .home-banner-info h4{
+        font-size: 16px;
+    }
     .con-1 {
         width: 75vw;
     }
@@ -2361,8 +2459,9 @@ footer {
     .cate-sub {
         width: 90vw;
     }
-    .item-categories::-webkit-scrollbar-button{
-        width:10px;
+
+    .item-categories::-webkit-scrollbar-button {
+        width: 10px;
     }
 }
 
@@ -2373,5 +2472,17 @@ footer {
 
     .link-footer {
         width: 60%;
+    }
+    .home-banner-info p{
+        font-size: 16px;
+    }
+    .home-banner-info h1{
+        font-size: 16px;
+    }
+    .home-banner-info h4{
+        font-size: 14px;
+    }
+    .home-banner-info button{
+        padding: 5px 15px;
     }
 }
