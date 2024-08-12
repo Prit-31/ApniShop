@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<employees>
+	<brand>
+		<name>Nike</name>
+		<product-name>Nike Zoom Vomero 5</product-name>
+		<style>Running</style>
+		<quantity>10</quantity>
+		<available-size>6,7,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Nike</name>
+		<product-name>Nike Air Max Solo</product-name>
+		<style>Gym</style>
+		<quantity>8</quantity>
+		<available-size>9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Nike</name>
+		<product-name>Nike Court Vision Low</product-name>
+		<style>Sports</style>
+		<quantity>5</quantity>
+		<available-size>8,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Adidas</name>
+		<product-name>ALPHABOOST V1 SHOES</product-name>
+		<style>Running</style>
+		<quantity>12</quantity>
+		<available-size>8,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Adidas</name>
+		<product-name>CLEAR FACTOR SHOES</product-name>
+		<style>Sports</style>
+		<quantity>4</quantity>
+		<available-size>6,7,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Puma</name>
+		<product-name>PWR NITRO™ Squared one8</product-name>
+		<style>Running</style>
+		<quantity>9</quantity>
+		<available-size>8,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Puma</name>
+		<product-name>Velocity NITRO™ 3 Psychedelic</product-name>
+		<style>Gym</style>
+		<quantity>3</quantity>
+		<available-size>8,9</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Reebok</name>
+		<product-name>REEBOK MEN ZTAUR RUN</product-name>
+		<style>Sports</style>
+		<quantity>10</quantity>
+		<available-size>8,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+	<brand>
+		<name>Reebok</name>
+		<product-name>REEBOK BOYS REEBO</product-name>
+		<style>Running</style>
+		<quantity>12</quantity>
+		<available-size>7,8,9,10</available-size>
+		<material>Rubber</material>
+	</brand>
+
+</employees>
+

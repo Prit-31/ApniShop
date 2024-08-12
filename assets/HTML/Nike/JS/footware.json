@@ -1,0 +1,18 @@
+{
+    "product1": {
+        "productinfo": {
+            "Brand": "Nike",
+            "Name": "Nike Zoom Vomero 5",
+            "Style": "Running",
+            "Solematerial": "Rubber",
+            "Outermaterial": "Rubber"
+        },
+        "productdet":{
+            "helltype": "No Heel",
+            "itemweight": "500g",
+            "itemdimensions": "34x24x16 cm",
+            "closuretype": "Lace-Up",
+            "waterresistancelevel": "No Water Resistance"
+        }
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form | CodingLab</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Poppins, sans-serif;
+
+    }
+
+    body {
+      background: #fe9990;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    ::selection {
+      background: rgba(26, 188, 156, 0.3);
+    }
+
+    .container {
+      width: 500px;
+      padding: 0 20px;
+
+    }
+
+    .wrapper {
+      width: 100%;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .title {
+      height: 90px;
+      background: #ff6e61;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper form {
+      padding: 30px 25px 25px 25px;
+    }
+
+    .wrapper form .row {
+      height: 45px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .wrapper form .row input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding-left: 15px;
+      border-radius: 5px;
+      border: 1px solid lightgrey;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    form .row input:focus {
+      border-color: #16a085;
+      box-shadow: inset 0px 0px 2px 2px #ff6e61;
+    }
+
+    form .row input::placeholder {
+      color: #999;
+    }
+
+    .wrapper form .row i {
+      position: absolute;
+      width: 47px;
+      height: 100%;
+      color: #fff;
+      font-size: 18px;
+      background: #ff6e61;
+      border: 1px solid #ff6e61;
+      border-radius: 5px 0 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper form .pass {
+      margin: -8px 0 20px 0;
+    }
+
+    .wrapper form .pass a {
+      color: #16a085;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .wrapper form .pass a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper form .button input {
+      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 0px;
+      background: #fff;
+      border: 1px solid #282828;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form .button input:hover {
+      background: #ff6e61;
+      color: white;
+      border: none;
+    }
+
+    .wrapper form .signup-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 17px;
+    }
+
+    .wrapper form .signup-link a {
+      color: #ff6e61;
+      text-decoration: none;
+    }
+
+    form .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      margin: 0px 0px 15px 2px;
+      padding: 0px;
+      color: red;
+      /* display: none; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Registration Form</span></div>
+      <form action="../PHP/registration.php" method="post">
+        <div class="row">
+          <input id="fname" type="text" placeholder="First Name" name="username">
+        </div>
+        <p id="error-fname"></p>
+
+        <!-- <div class="row">
+          <input id="lname" type="text" placeholder="Last Name" name="lname">
+        </div> -->
+        <p id="error-lname"></p>
+
+        <div class="row">
+          <input id="number" type="text" placeholder="Phone Number" name="pnumber">
+        </div>
+        <p id="error-number"></p>
+
+        <div class="row">
+          <input id="password" type="password" placeholder="Password" name="password">
+        </div>
+        <p id="error-password"></p>
+
+        <div class="row">
+          <input id="cpassword" type="password" placeholder="Confirm Password" name="cpassword">
+        </div>
+        <p id="error-cpassword"></p>
+
+        <div class="row button" onclick="valid()">
+          <input type="submit" value="Registration">
+        </div>
+        <div class="signup-link">Already have an account? <a href="./login.html">Login now</a></div>
+      </form>
+    </div>
+  </div>
+
+</body>
+<script>
+  function valid() {
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+    let a = " ";
+    console.log(fname)
+    if (fname == "") {
+      document.getElementById("error-fname").innerHTML = "Enter Your First Name";
+    }
+    else {
+      document.getElementById("error-fname").innerHTML = "";
+    }
+    if (lname = a) {
+      document.getElementById("error-lname").innerHTML = "Enter Your Last Name";
+    }
+    else {
+      document.getElementById("error-lname").innerHTML = "";
+    }
+    let number = document.getElementById("number").value;
+    if(number.length != 10){
+      document.getElementById("error-number").innerHTML= "Enter 10 digit number";
+    }
+    else{
+      document.getElementById("error-number").innerHTML= "";
+
+    }
+    let password = document.getElementById("password").value;
+    let cpassword = document.getElementById("cpassword").value;
+    if(password == ""){
+      document.getElementById("error-password").innerHTML= "Enter Password";
+
+    }else{
+      document.getElementById("error-password").innerHTML= "";
+
+    }
+    if (password == cpassword) {
+      document.getElementById("error-cpassword").innerHTML= "";
+
+    } else {
+      document.getElementById("error-cpassword").innerHTML= "Re-Enter Password";
+    }
+  }
+</script>
+
+</html>
